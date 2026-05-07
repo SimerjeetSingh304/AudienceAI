@@ -57,13 +57,13 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 ───────────────────────────────────────────── */
 function Marquee() {
   const items = [
-    "10,000+ Concurrent Users",
+      "Architected for 10K+ Users",
     "AI Clustering",
     "Live Polls",
     "Real-time Q&A",
-    "Enterprise SSO",
+      "WebSocket-driven",
     "Sub-50ms Latency",
-    "99.9% Uptime",
+      "Open Source",
     "Groq Llama 3.3",
   ]
   const doubled = [...items, ...items]
@@ -137,10 +137,10 @@ export default function LandingPage() {
 
   const features = [
     {
-      icon: Zap,
+      icon: Radio,
       label: "01",
-      title: "Real-time Q&A",
-      description: "Zero-lag question submission, upvoting, and moderation. WebSocket-powered live updates keep everyone in sync.",
+      title: "WebSocket Sync",
+      description: "Real-time question submission and upvoting powered by Socket.io and Redis Pub/Sub for cross-instance consistency.",
       accentClass: "text-primary",
       bgClass: "bg-primary/5 border-primary/15",
       iconBg: "bg-primary/10",
@@ -149,7 +149,7 @@ export default function LandingPage() {
       icon: Brain,
       label: "02",
       title: "AI Clustering",
-      description: "Groq Llama 3.3 at 300×+ speed. Duplicate questions auto-merge. Topics surface organically.",
+      description: "Llama 3.3 (via Groq) groups similar questions in <1s. Reduces redundancy and surfaces core audience concerns.",
       accentClass: "text-accent",
       bgClass: "bg-accent/5 border-accent/15",
       iconBg: "bg-accent/10",
@@ -157,8 +157,8 @@ export default function LandingPage() {
     {
       icon: BarChart3,
       label: "03",
-      title: "Live Polls",
-      description: "Five poll types. Results animate in real-time. Word clouds, rankings, ratings — all built in.",
+      title: "Live Polling Engine",
+      description: "Transactional polling system with real-time result aggregation and D3-powered live visualizations.",
       accentClass: "text-emerald-500",
       bgClass: "bg-emerald-500/5 border-emerald-500/15",
       iconBg: "bg-emerald-500/10",
@@ -166,17 +166,17 @@ export default function LandingPage() {
     {
       icon: Users,
       label: "04",
-      title: "Massive Scale",
-      description: "Redis-backed state, WebSocket clustering. 10K+ concurrent attendees with zero performance drop.",
+      title: "Redis State",
+      description: "Session state and message queues managed via Redis, ensuring sub-millisecond data access and high concurrency.",
       accentClass: "text-orange-500",
       bgClass: "bg-orange-500/5 border-orange-500/15",
       iconBg: "bg-orange-500/10",
     },
     {
-      icon: Shield,
+      icon: Lock,
       label: "05",
-      title: "Enterprise Security",
-      description: "SSO, RBAC, end-to-end encryption, and audit logs for compliance-heavy teams.",
+      title: "Clerk Auth + RBAC",
+      description: "Secure presenter authentication via Clerk with role-based access control for session moderation.",
       accentClass: "text-violet-500",
       bgClass: "bg-violet-500/5 border-violet-500/15",
       iconBg: "bg-violet-500/10",
@@ -184,8 +184,8 @@ export default function LandingPage() {
     {
       icon: Activity,
       label: "06",
-      title: "Deep Analytics",
-      description: "Session heatmaps, engagement curves, exportable CSVs, and AI-written post-event reports.",
+      title: "System Analytics",
+      description: "Detailed session logs and AI-generated transcripts, exportable for post-event architectural review.",
       accentClass: "text-cyan-500",
       bgClass: "bg-cyan-500/5 border-cyan-500/15",
       iconBg: "bg-cyan-500/10",
@@ -194,55 +194,25 @@ export default function LandingPage() {
 
   const testimonials = [
     {
-      name: "Sarah Chen",
-      role: "PM · TechCorp",
-      content: "The AI clustering saved us hours of question-sorting at our last all-hands. Audience loved the live polls.",
-      initials: "SC",
+      name: "Architecture Review",
+      role: "Project Goal",
+      content: "The primary objective was to handle high-concurrency Q&A without state drifting, achieved through Redis Pub/Sub.",
+      initials: "AR",
       colorClass: "bg-primary/10 text-primary ring-1 ring-primary/20",
     },
     {
-      name: "Michael Rodriguez",
-      role: "Lead Eng · ScaleUp",
-      content: "5,000 concurrent users, zero hiccups. Polling is buttery smooth. We've tried everything — this wins.",
-      initials: "MR",
+      name: "AI Performance",
+      role: "Benchmark",
+      content: "Groq's Llama 3.3 inference allows for near-instantaneous question clustering even with hundreds of active threads.",
+      initials: "AI",
       colorClass: "bg-accent/10 text-accent ring-1 ring-accent/20",
     },
     {
-      name: "Dr. Emily Watson",
-      role: "Professor · Stanford",
-      content: "Anonymous Q&A completely changed classroom dynamics. Engagement up 300% in one semester.",
-      initials: "EW",
+      name: "User Experience",
+      role: "Design Focus",
+      content: "A frictionless 'scan-to-join' flow ensures that audience members can participate without any app installation or sign-up.",
+      initials: "UX",
       colorClass: "bg-emerald-500/10 text-emerald-500 ring-1 ring-emerald-500/20",
-    },
-  ]
-
-  const plans = [
-    {
-      name: "Starter",
-      price: "$0",
-      period: "/mo",
-      desc: "For small meetups and solo presenters.",
-      items: ["50 participants", "Unlimited questions", "Basic single-choice polls", "3 AI clusters/session"],
-      cta: "Start Free",
-      highlight: false,
-    },
-    {
-      name: "Pro",
-      price: "$29",
-      period: "/mo",
-      desc: "Everything for large events and conferences.",
-      items: ["500 participants", "Advanced AI insights", "All 5 poll types", "Custom branding", "Export analytics", "Priority support"],
-      cta: "Upgrade Now",
-      highlight: true,
-    },
-    {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      desc: "Unlimited scale, premium security.",
-      items: ["Unlimited participants", "Single Sign-On (SSO)", "Dedicated manager", "99.9% SLA", "Audit logs", "Whitelabeling"],
-      cta: "Contact Sales",
-      highlight: false,
     },
   ]
 
@@ -336,7 +306,7 @@ export default function LandingPage() {
         </Link>
 
         <nav className="ml-auto flex items-center gap-2 sm:gap-6">
-          {["Features", "Pricing", "Docs"].map((item) => (
+          {["Features", "Docs"].map((item) => (
             <Link
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -387,8 +357,8 @@ export default function LandingPage() {
               transition={{ duration: 0.5 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest text-primary bg-primary/10 border border-primary/20 mb-10"
             >
-              <Radio className="w-3.5 h-3.5 animate-pulse" />
-              Powered by Groq Llama 3.3 · 300× faster inference
+              <Users className="w-3.5 h-3.5" />
+              Built by Simerjeet Singh — CS @ MSIT Delhi · CGPA 8.47
             </motion.div>
 
             {/* Headline */}
@@ -399,9 +369,9 @@ export default function LandingPage() {
               className="serif font-bold leading-[1.06] tracking-tight mb-8"
               style={{ fontSize: "clamp(2.8rem,8vw,6.5rem)" }}
             >
-              <span className="text-foreground">Presentations</span>
+              <span className="text-foreground">Your audience has questions.</span>
               <br />
-              <span className="text-gradient-brand">audiences remember.</span>
+              <span className="text-gradient-brand">AudienceAI surfaces what matters.</span>
             </motion.h1>
 
             <motion.p
@@ -418,11 +388,11 @@ export default function LandingPage() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4"
+              className="flex flex-col sm:flex-row items-center justify-center gap-6"
             >
               <Link href="/dashboard">
                 <button className="btn-primary font-bold px-8 h-14 rounded-full text-base flex items-center gap-2 group">
-                  Start Presenting Free
+                  Start Presenting
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
@@ -432,6 +402,22 @@ export default function LandingPage() {
                   Join a Session
                 </button>
               </Link>
+
+              {/* QR Code Teaser */}
+              <div className="hidden lg:flex items-center gap-4 pl-6 border-l border-border/50">
+                <div className="w-16 h-16 bg-white p-1 rounded-lg shadow-sm">
+                   {/* Placeholder for a real QR code */}
+                   <img 
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://audience-ai.onrender.com/join/demo" 
+                    alt="QR Code" 
+                    className="w-full h-full object-contain"
+                   />
+                </div>
+                <div className="text-left">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-primary">Scan to Join</p>
+                  <p className="text-xs text-muted-foreground">Try the live demo</p>
+                </div>
+              </div>
             </motion.div>
 
             <motion.p
@@ -440,7 +426,7 @@ export default function LandingPage() {
               transition={{ delay: 0.8 }}
               className="mt-8 text-xs text-muted-foreground/60"
             >
-              Trusted by 2,000+ presenters · No credit card · 2 min setup
+              Open-source Portfolio Project · Powered by Groq Llama 3.3 · Sub-50ms Latency
             </motion.p>
           </motion.div>
 
@@ -562,8 +548,8 @@ export default function LandingPage() {
                     ))}
                   </div>
 
-                  <div className="grid grid-cols-2 gap-3">
-                    {[{ val: "94%", label: "Satisfaction" }, { val: "12m", label: "Avg. Engage" }].map((s, i) => (
+                  <div className="grid grid-cols-1 gap-3">
+                    {[{ val: "Real-time", label: "Sync Status" }].map((s, i) => (
                       <div key={i} className="p-3 rounded-xl border border-border bg-muted/30 text-center">
                         <div className="text-xl font-bold text-card-foreground">{s.val}</div>
                         <div className="text-xs text-muted-foreground mt-0.5">{s.label}</div>
@@ -580,10 +566,10 @@ export default function LandingPage() {
         <section className="py-20 px-6 border-y border-border/50 bg-muted/10">
           <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12">
             {[
-              { val: 10000, suffix: "+", label: "Concurrent users", icon: Users },
-              { val: 50, suffix: "ms", label: "Real-time latency", icon: Zap },
-              { val: 99, suffix: ".9%", label: "Uptime SLA", icon: Shield },
-              { val: 5000000, suffix: "+", label: "Questions processed", icon: MessageSquare },
+              { val: 10000, suffix: "+", label: "Architected for scale", icon: Users },
+              { val: 50, suffix: "ms", label: "Groq inference speed", icon: Zap },
+              { val: 1, suffix: "ms", label: "Redis avg latency", icon: Activity },
+              { val: 1, suffix: "sec", label: "AI Clustering Time", icon: Brain },
             ].map((s, i) => (
               <motion.div
                 key={i}
@@ -647,9 +633,9 @@ export default function LandingPage() {
         <section className="py-28 px-6 border-t border-border/50 bg-muted/5">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <p className="text-xs font-bold uppercase tracking-widest text-primary mb-4">Testimonials</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-primary mb-4">Benchmarks</p>
               <h2 className="serif font-bold text-foreground" style={{ fontSize: "clamp(2rem,5vw,3rem)" }}>
-                Presenters love it.
+                Core Project Objectives
               </h2>
             </div>
 
@@ -684,63 +670,54 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* ════════════════ PRICING ════════════════ */}
-        <section id="pricing" className="py-28 px-6 border-t border-border/50">
-          <div className="max-w-5xl mx-auto">
+        {/* ════════════════ HOW IT WORKS ════════════════ */}
+        <section id="docs" className="py-28 px-6 border-t border-border/50">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <p className="text-xs font-bold uppercase tracking-widest text-primary mb-4">Pricing</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-primary mb-4">Architecture</p>
               <h2 className="serif font-bold text-foreground mb-4" style={{ fontSize: "clamp(2rem,5vw,3rem)" }}>
-                Simple, honest pricing.
+                How AudienceAI Works
               </h2>
-              <p className="text-muted-foreground">Start free. Upgrade when you need it.</p>
+              <p className="text-muted-foreground">A deep dive into the technical flow of a session.</p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 items-center">
-              {plans.map((plan, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className={`card-lift rounded-3xl p-8 md:p-10 relative overflow-hidden ${
-                    plan.highlight ? "plan-pro bg-card md:-translate-y-4" : "border border-border bg-card"
-                  }`}
-                >
-                  {plan.highlight && (
-                    <div className="absolute top-6 right-6">
-                      <span className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-primary bg-primary/10 border border-primary/20">
-                        Popular
-                      </span>
-                    </div>
-                  )}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 relative">
+              {/* Connector lines (Desktop) */}
+              <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-0.5 bg-border -z-10" />
 
-                  <h3 className="font-bold text-card-foreground text-lg mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline gap-1 mb-3">
-                    <span className="serif text-5xl text-foreground tracking-tight">{plan.price}</span>
-                    {plan.period && <span className="text-muted-foreground text-sm">{plan.period}</span>}
+              {[
+                {
+                  step: "01",
+                  title: "Session Initialization",
+                  desc: "Presenter starts a session via Clerk-secured dashboard. A unique room ID is generated, and Redis initializes a fresh session state store.",
+                  icon: Layout
+                },
+                {
+                  step: "02",
+                  title: "Real-time Interaction",
+                  desc: "Audience joins via QR/Link. Questions and upvotes are broadcast via Socket.io, with Redis Pub/Sub keeping distributed instances in sync.",
+                  icon: MessageSquare
+                },
+                {
+                  step: "03",
+                  title: "AI Analysis & Clustering",
+                  desc: "Groq Llama 3.3 processes incoming streams, auto-merging duplicates and surfacing 'hot' topics to the presenter in real-time.",
+                  icon: Brain
+                },
+                {
+                  step: "04",
+                  title: "Error Resilience",
+                  desc: "If Groq fails, questions display unclustered. If Redis drops, in-memory fallback activates with exponential backoff reconnect.",
+                  icon: Shield
+                }
+              ].map((s, i) => (
+                <div key={i} className="flex flex-col items-center text-center group">
+                  <div className="w-16 h-16 rounded-2xl bg-muted flex items-center justify-center mb-6 border border-border group-hover:border-primary/50 transition-colors bg-card shadow-sm">
+                    <s.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <p className="text-sm text-muted-foreground mb-8">{plan.desc}</p>
-
-                  <ul className="space-y-3 mb-10">
-                    {plan.items.map((item, j) => (
-                      <li key={j} className="flex items-center gap-3 text-sm text-muted-foreground">
-                        <CheckCircle className={`w-4 h-4 shrink-0 ${plan.highlight ? "text-primary" : "text-muted-foreground/50"}`} />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <button
-                    className={`w-full py-3 rounded-xl text-sm font-semibold transition-all ${
-                      plan.highlight
-                        ? "btn-primary"
-                        : "bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border"
-                    }`}
-                  >
-                    {plan.cta}
-                  </button>
-                </motion.div>
+                  <h3 className="text-lg font-bold mb-3">{s.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed px-4">{s.desc}</p>
+                </div>
               ))}
             </div>
           </div>
@@ -760,19 +737,26 @@ export default function LandingPage() {
                 style={{ background: "radial-gradient(ellipse at top, oklch(0.6 0.22 260 / 0.15) 0%, transparent 70%)" }}
               />
               <div className="relative z-10">
-                <h2 className="serif font-bold text-foreground mb-6 leading-tight" style={{ fontSize: "clamp(2rem,5vw,3.5rem)" }}>
-                  Ready to transform<br />your presentations?
+                <h2 className="serif font-bold text-foreground mb-6 leading-tight" style={{ fontSize: "clamp(2rem,5vw,3rem)" }}>
+                  Want to see the<br />full architecture?
                 </h2>
                 <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-                  Join thousands of presenters who run smarter, more memorable sessions with AudienceAI.
+                  Explore the source code on GitHub or try out a live session to see the real-time sync in action.
                 </p>
-                <Link href="/dashboard">
-                  <button className="btn-primary font-bold px-10 h-14 rounded-full text-base flex items-center gap-2 group mx-auto">
-                    Get Started Free
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </Link>
-                <p className="mt-6 text-xs text-muted-foreground/50">No credit card required · Setup in 2 minutes</p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <Link href="https://github.com/prince545">
+                    <button className="btn-primary font-bold px-10 h-14 rounded-full text-base flex items-center gap-2 group">
+                      View on GitHub
+                      <ExternalLink className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                    </button>
+                  </Link>
+                  <Link href="/join">
+                    <button className="btn-ghost font-bold px-10 h-14 rounded-full text-base flex items-center gap-2 group">
+                      Try Demo Session
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </Link>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -791,20 +775,19 @@ export default function LandingPage() {
                 <span className="font-bold tracking-tight">AudienceAI</span>
               </Link>
               <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
-                The complete audience engagement platform for modern presenters. Focus on what matters — let AI handle the rest.
+                Open-source audience engagement platform. Built for performance, architected for scale.
               </p>
             </div>
             {[
-              { title: "Product", links: ["Features", "Pricing", "Demo", "Changelog"] },
-              { title: "Company", links: ["About", "Blog", "Careers", "Contact"] },
-              { title: "Legal", links: ["Terms", "Privacy", "Security"] },
+              { title: "Project", links: ["GitHub", "Live Demo", "Architecture"], urls: ["https://github.com/prince545", "/join", "#docs"] },
+              { title: "Connect", links: ["Portfolio", "LinkedIn"], urls: ["https://portfolio2026-sepia.vercel.app/", "https://www.linkedin.com/in/simerjeet-singh-8b1700295/"] },
             ].map((col, i) => (
               <div key={i}>
                 <h4 className="text-xs font-bold uppercase tracking-widest text-muted-foreground/50 mb-5">{col.title}</h4>
                 <ul className="space-y-3">
-                  {col.links.map((l) => (
+                  {col.links.map((l, idx) => (
                     <li key={l}>
-                      <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                      <Link href={col.urls[idx]} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                         {l}
                       </Link>
                     </li>
@@ -814,11 +797,16 @@ export default function LandingPage() {
             ))}
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-border/50">
-            <p className="text-xs text-muted-foreground/50">© 2026 AudienceAI. All rights reserved.</p>
+            <p className="text-xs text-muted-foreground/50">© 2026 Simerjeet Singh. Built with Next.js, Redis, and Groq AI.</p>
             <div className="flex gap-5">
-              {[Globe, ExternalLink, Layout].map((Icon, i) => (
-                <Link key={i} href="#" className="text-muted-foreground/40 hover:text-muted-foreground transition-colors">
-                  <Icon className="w-4 h-4" />
+              {[
+                { icon: Globe, label: "Portfolio", href: "https://portfolio2026-sepia.vercel.app/" },
+                { icon: ExternalLink, label: "GitHub", href: "https://github.com/prince545" },
+                { icon: Layout, label: "LinkedIn", href: "https://www.linkedin.com/in/simerjeet-singh-8b1700295/" }
+              ].map((link, i) => (
+                <Link key={i} href={link.href} className="text-muted-foreground/40 hover:text-muted-foreground transition-colors flex items-center gap-1.5 text-xs font-medium">
+                  <link.icon className="w-4 h-4" />
+                  {link.label}
                 </Link>
               ))}
             </div>
