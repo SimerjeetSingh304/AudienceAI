@@ -740,7 +740,7 @@ export default function LandingPage() {
                   Explore the source code on GitHub or try out a live session to see the real-time sync in action.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Link href="https://github.com/prince545">
+                  <Link href="https://github.com/SimerjeetSingh304/AudienceAI">
                     <button className="btn-primary font-bold px-10 h-14 rounded-full text-base flex items-center gap-2 group">
                       View on GitHub
                       <ExternalLink className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -770,7 +770,7 @@ export default function LandingPage() {
               </p>
             </div>
             {[
-              { title: "Project", links: ["GitHub", "Live Demo", "Architecture"], urls: ["https://github.com/prince545", "/join", "#docs"] },
+              { title: "Project", links: ["GitHub", "Live Demo", "Architecture"], urls: ["https://github.com/SimerjeetSingh304/AudienceAI", "/join", "#docs"] },
               { title: "Connect", links: ["Portfolio", "LinkedIn"], urls: ["https://portfolio2026-sepia.vercel.app/", "https://www.linkedin.com/in/simerjeet-singh-8b1700295/"] },
             ].map((col, i) => (
               <div key={i}>
@@ -792,7 +792,7 @@ export default function LandingPage() {
             <div className="flex gap-5">
               {[
                 { icon: Globe, label: "Portfolio", href: "https://portfolio2026-sepia.vercel.app/" },
-                { icon: ExternalLink, label: "GitHub", href: "https://github.com/prince545" },
+                { icon: ExternalLink, label: "GitHub", href: "https://github.com/SimerjeetSingh304/AudienceAI" },
                 { icon: Layout, label: "LinkedIn", href: "https://www.linkedin.com/in/simerjeet-singh-8b1700295/" }
               ].map((link, i) => (
                 <Link key={i} href={link.href} className="text-muted-foreground/40 hover:text-muted-foreground transition-colors flex items-center gap-1.5 text-xs font-medium">
