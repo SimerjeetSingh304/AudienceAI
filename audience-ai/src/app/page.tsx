@@ -24,6 +24,7 @@ import {
 import { motion, useScroll, useTransform } from "framer-motion"
 import { ThemeToggle } from "@/components/shared/ThemeToggle"
 import { useEffect, useState, useRef } from "react"
+import Logo from "@/components/shared/Logo"
 
 /* ─────────────────────────────────────────────
    Animated counter (IntersectionObserver)
@@ -298,12 +299,7 @@ export default function LandingPage() {
 
       {/* ════════════════ HEADER ════════════════ */}
       <header className="px-6 lg:px-14 h-[72px] flex items-center border-b border-border/50 sticky top-0 z-50 bg-background/80 backdrop-blur-xl">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-xl flex items-center justify-center bg-primary transition-transform group-hover:scale-105">
-            <Mic className="w-4 h-4 text-primary-foreground" />
-          </div>
-          <span className="font-bold tracking-tight text-lg">AudienceAI</span>
-        </Link>
+        <Logo />
 
         <nav className="ml-auto flex items-center gap-2 sm:gap-6">
           {["Features", "Docs"].map((item) => (
@@ -369,9 +365,9 @@ export default function LandingPage() {
               className="serif font-bold leading-[1.06] tracking-tight mb-8"
               style={{ fontSize: "clamp(2.8rem,8vw,6.5rem)" }}
             >
-              <span className="text-foreground">Your audience has questions.</span>
+              <span className="text-foreground">Smarter Q&A.</span>
               <br />
-              <span className="text-gradient-brand">AudienceAI surfaces what matters.</span>
+              <span className="text-gradient-brand">Live.</span>
             </motion.h1>
 
             <motion.p
@@ -768,12 +764,7 @@ export default function LandingPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-14">
             <div className="col-span-2">
-              <Link href="/" className="flex items-center gap-2 mb-5 w-fit group">
-                <div className="w-8 h-8 rounded-xl flex items-center justify-center bg-primary transition-transform group-hover:scale-105">
-                  <Mic className="w-4 h-4 text-primary-foreground" />
-                </div>
-                <span className="font-bold tracking-tight">AudienceAI</span>
-              </Link>
+              <Logo className="mb-5 w-fit" />
               <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
                 Open-source audience engagement platform. Built for performance, architected for scale.
               </p>
